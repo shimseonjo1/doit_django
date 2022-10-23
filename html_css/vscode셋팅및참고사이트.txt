@@ -7,7 +7,7 @@ auto rename tag
 
 -폴더보기수정  
 settings-explorer.compactFolders 체크해제
-
+------------------------------------------------------
 -참고 사이트
 https://getbootstrap.com/
 https://startbootstrap.com
@@ -15,7 +15,7 @@ https://fontawesome.com/
 https://hangul.thefron.me/  한글입숨 
 https://picsum.photos/seed/{seed값}/{width}/{height}
 
-
+------------------------------------------------------
 
 - git log 나가기: q
 
@@ -59,4 +59,20 @@ $ git revert 54c6547
 $ git revert a516d21
 
 이후 commit을 하면 끝이다.
+
+
+------------------------------------------------------
+conda 가상환경
+
+-생성
+conda create -n 가상환경 이름 python = 파이썬 버전
+
+-가상목록 확인
+conda env list
+
+-가상환경 활성화
+conda activate 가상환경이름
+
+- 가상환경 삭제
+conda env remove --n 가상환경이름
 
