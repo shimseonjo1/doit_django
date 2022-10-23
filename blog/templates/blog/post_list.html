@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Blog</h1>
-    {%for post in posts%}
+    {%for post in post_list%}
     <hr>
     <h2>
         <a href="{{post.get_absolute_url}}">{{post.title}}</a> 
