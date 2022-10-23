@@ -1,0 +1,62 @@
+vscode
+-extensions 추가
+material icon Theme
+intellicode
+auto close tag
+auto rename tag
+
+-폴더보기수정  
+settings-explorer.compactFolders 체크해제
+
+-참고 사이트
+https://getbootstrap.com/
+https://startbootstrap.com
+https://fontawesome.com/
+https://hangul.thefron.me/  한글입숨 
+https://picsum.photos/seed/{seed값}/{width}/{height}
+
+
+
+- git log 나가기: q
+
+- git 이전버전 돌아가기
+ 1. reset
+
+아직 원격 저장소에 push하기 전이라면 reset을 사용
+
+git reset --옵션 커밋해시
+git reset --hard 커밋해시
+
+  1) hard
+돌아가려는 커밋 이후의 모든 내용을 지워 버린다.
+staging area와 working directory 모두 돌아가려는 커밋과 동일해진다.
+
+2) soft
+돌아가려는 커밋으로 되돌아가고, HEAD가 돌아가려는 커밋을 새롭게 가리키게 된다.
+staging area와 working directory는 아무런 변화도 없다.
+
+3) mixed
+돌아가려는 커밋으로 되돌아가고, HEAD가 돌아가려는 커밋을 새롭게 가리키게 된다.
+staging area는 돌아가려는 커밋과 동일해지고, working directory는 아무 변화가 없다.
+ 
+
+ 2. revert
+이미 원격 저장소에 push한 상태
+
+git log 찍고,
+ 
+커밋이 다음의 commit1>2>3의 순서로 발생
+
+commit3        54c6547
+commit2        a516d21
+commit1        4567289    // 되돌아가려는 커밋
+
+내가 돌아가려는 커밋이 commit1이면,
+commit3를 먼저 revert하고 
+이후 commit2를 revert하는 방식으로 순차적으로 진행해야 한다.
+
+$ git revert 54c6547
+$ git revert a516d21
+
+이후 commit을 하면 끝이다.
+
